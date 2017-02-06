@@ -1,14 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false" %>
-<%@include file="include.inc.jsp" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset=UTF-8>
-    <link rel="stylesheet" href="${base}/webFrame/bootstrap-3.3.5/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${base}/webFrame/bootstrap-3.3.5/bootstrap/css/bootstrap-theme.min.css">
-    <script src="${base}/webFrame/bootstrap-3.3.5/jquery-1.11.3.min.js"></script>
-    <script src="${base}/webFrame/bootstrap-3.3.5/bootstrap/js/bootstrap.min.js"></script>
+    <%@include file="include.inc.jsp" %>
 </head>
 <body>
 <div>

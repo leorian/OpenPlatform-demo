@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class IndexController {
 
-	@RequestMapping("/index")
-	public String list(HttpServletRequest request){
-		
-		return "index";
-	}
-	
+    @RequestMapping("/index")
+    public String list(HttpServletRequest request) {
+        return "index";
+    }
+
+    @RequestMapping("/hello")
+    public String hello(HttpServletRequest request) {
+        return "hello";
+    }
+
 }
