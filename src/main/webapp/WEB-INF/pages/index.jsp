@@ -180,7 +180,7 @@
     </p>
     <br/>
 
-    <h2>1.6测试用例Demo</h2>
+    <h2>1.6获取token测试用例Demo运行环境</h2>
     <div>
         <form class="form-horizontal" role="form">
             <div class="form-group">
@@ -271,7 +271,14 @@
     </div>
     <br/>
 
-
+    <h2>1.7获取token成功示意图</h2>
+    <div>
+        <img src="${base}/img/getTokenSuccess.png" />
+    </div>
+    <h2>1.8获取token失败示意图</h2>
+    <div>
+        <img src="${base}/img/getTokenFail.png"/>
+    </div>
 </div>
 </body>
 </html>
