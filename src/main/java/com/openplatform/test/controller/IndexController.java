@@ -24,4 +24,9 @@ public class IndexController {
         return "openapi";
     }
 
+    @RequestMapping("/upload")
+    public String upload(HttpServletRequest request) {
+        return "upload";
+    }
+
 }
