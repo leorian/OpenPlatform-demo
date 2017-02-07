@@ -73,9 +73,33 @@
                 }
 
                 //具体获取token发送请求
-                $.post(requestUrlInput+"/token/getToken", {"appKey":appKeyInput, "currentTime":currentTimeInput, "signMsg": signMsgInput}, function (result) {
-                    console.log(result);
-                });
+                $.post(requestUrlInput + "/token/getToken", {
+                    "appKey": appKeyInput,
+                    "currentTime": currentTimeInput,
+                    "signMsg": signMsgInput
+                }, function (result) {
+                    if (console) {
+                        console.log(result);
+                    }
+
+                    $("#getTokenResultDiv").html(JSON.stringify(result));
+
+                    if (result.success) {
+                        console.log(result.data);
+                        var dataHtml = "";
+                        for (var key in result.data) {
+                            dataHtml = dataHtml + "<p>" + key + ": " + result.data[key] + "</p>";
+                        }
+                        $("#getTokenParserResultDiv").html(dataHtml);
+                    } else {
+                        console.log(result.errCode + "-----------" + result.errMsg)
+                        var dataHtml = "";
+                        dataHtml = dataHtml + "<p>" + "errCode" + ": " + result.errCode + "</p>";
+                        dataHtml = dataHtml + "<p>" + "errMsg" + ": " + result.errMsg + "</p>";
+                        $("#getTokenParserResultDiv").html(dataHtml);
+                    }
+
+                }, 'json');
 
             });
         });
@@ -226,6 +250,24 @@
                 </div>
             </div>
         </form>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    返回结果实际如下：
+                </h3>
+            </div>
+            <div class="panel-body" id="getTokenResultDiv" style="word-wrap:break-word; word-break:break-all; ">
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    返回结果解析如下：
+                </h3>
+            </div>
+            <div class="panel-body" id="getTokenParserResultDiv">
+            </div>
+        </div>
     </div>
     <br/>
 
