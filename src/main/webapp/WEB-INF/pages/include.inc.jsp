@@ -11,3 +11,5 @@
 <link rel="stylesheet" href="${base}/webFrame/bootstrap-3.3.5/bootstrap/css/bootstrap-theme.min.css">
 <script src="${base}/webFrame/bootstrap-3.3.5/jquery-1.11.3.min.js"></script>
 <script src="${base}/webFrame/bootstrap-3.3.5/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+
