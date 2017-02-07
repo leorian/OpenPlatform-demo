@@ -173,7 +173,7 @@
         <div class="form-group">
             <label for="requestUrlInput" class="col-sm-2 control-label">请求地址</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="requestUrlInput"/>
+                <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access" />
             </div>
             <label class="col-sm-2 control-label">
                 /{route}/{addr}/{ver}/{method}
@@ -182,7 +182,7 @@
         <div class="form-group">
             <label for="routeInput" class="col-sm-2 control-label">route</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="routeInput"/>
+                <input type="text" class="form-control" id="routeInput" value="access" />
             </div>
             <div class="col-sm-2">
 
@@ -191,7 +191,7 @@
         <div class="form-group">
             <label for="addrInput" class="col-sm-2 control-label">addr</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="addrInput"/>
+                <input type="text" class="form-control" id="addrInput" value="qiniuTokenService"/>
             </div>
             <div class="col-sm-2">
 
@@ -200,7 +200,7 @@
         <div class="form-group">
             <label for="verInput" class="col-sm-2 control-label">ver</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="verInput"/>
+                <input type="text" class="form-control" id="verInput" value="v1.0"/>
             </div>
             <div class="col-sm-2">
 
@@ -209,7 +209,7 @@
         <div class="form-group">
             <label for="methodInput" class="col-sm-2 control-label">method</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="methodInput"/>
+                <input type="text" class="form-control" id="methodInput" value="getUpLoadToken"/>
             </div>
             <div class="col-sm-2">
 
@@ -227,7 +227,7 @@
         <div class="form-group">
             <label for="openApiRequestTextArea" class="col-sm-2 control-label">接口参数</label>
             <div class="col-sm-8">
-                <textarea id="openApiRequestTextArea" rows="10" cols="70"></textarea>
+                <textarea id="openApiRequestTextArea" rows="10" cols="70">{"key":"hello.jpg"}</textarea>
             </div>
             <div class="col-sm-2">
                 JSON字符串，具体调用时将解析成具体参数名=参数值形式，和token并列提交

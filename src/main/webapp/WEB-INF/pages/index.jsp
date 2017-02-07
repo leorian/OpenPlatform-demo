@@ -7,7 +7,8 @@
     <%@include file="include.inc.jsp" %>
     <script>
         $(function () {
-
+            var timestamp = Date.parse(new Date());
+            $("#currentTimeInput").val(timestamp);
             //生成signMsg按钮事件
             $("#generateSignMsgBtn").click(function () {
                 if (console) {
@@ -188,7 +189,7 @@
                     请求地址
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="requestUrlInput">
+                    <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access">
                 </div>
                 <label class="col-sm-2 control-label">
                     /token/getToken
@@ -199,7 +200,7 @@
                     appKey
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="appKeyInput">
+                    <input type="text" class="form-control" id="appKeyInput" value="A0E24EAD-B615-4752-BE94-F2AC6C049F50">
                 </div>
                 <div class="col-sm-2">
 
@@ -210,7 +211,7 @@
                     appSecret
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="appSecretInput">
+                    <input type="text" class="form-control" id="appSecretInput" value="799460E7-9F1B-4029-BBA1-BFC0FB8165CE">
                 </div>
                 <div class="col-sm-2">
 
