@@ -19,4 +19,9 @@ public class IndexController {
         return "hello";
     }
 
+    @RequestMapping("/openapi")
+    public String openapi(HttpServletRequest request) {
+        return "openapi";
+    }
+
 }
