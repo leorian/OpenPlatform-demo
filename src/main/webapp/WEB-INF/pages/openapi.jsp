@@ -76,6 +76,22 @@
                         console.log(result);
                     }
 
+                    $("#callOpenApiResultDiv").html(JSON.stringify(result));
+
+                    if (result.success) {
+                        console.log(result.data);
+                        var dataHtml = "";
+                        for (var key in result.data) {
+                            dataHtml = dataHtml + "<p>" + key + ": " + result.data[key] + "</p>";
+                        }
+                        $("#callOpenApiParserResultDiv").html(dataHtml);
+                    } else {
+                        console.log(result.errCode + "-----------" + result.errMsg)
+                        var dataHtml = "";
+                        dataHtml = dataHtml + "<p>" + "errCode" + ": " + result.errCode + "</p>";
+                        dataHtml = dataHtml + "<p>" + "errMsg" + ": " + result.errMsg + "</p>";
+                        $("#callOpenApiParserResultDiv").html(dataHtml);
+                    }
                 }, 'json');
 
             });
@@ -244,11 +260,22 @@
                 返回结果解析如下：
             </h3>
         </div>
-        <div class="panel-body" id="callOpenApiParserResultDiv">
+        <div class="panel-body" id="callOpenApiParserResultDiv" style="word-wrap:break-word; word-break:break-all; ">
         </div>
     </div>
     <br/>
 
+    <h2>2.6获取七牛上传凭证token成功示意图</h2>
+    <div>
+        <img src="${base}/img/getqiniuTokenSuccess.png" />
+    </div>
+    <br/>
+
+    <h2>2.6获取七牛上传凭证token失败示意图</h2>
+    <div>
+        <img src="${base}/img/getqiniuTokenFail.png" />
+    </div>
+    <br/>
 
 </div>
 </body>
