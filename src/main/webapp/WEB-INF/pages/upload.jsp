@@ -8,16 +8,20 @@
         .ipt {
             width: 300px;
         }
+
         label {
             width: 130px;
             display: block;
         }
+
         ul li {
-            list-style:none;
+            list-style: none;
         }
+
         .ui-progressbar {
             position: relative;
         }
+
         .progress-label {
             position: absolute;
             left: 50%;
@@ -25,12 +29,14 @@
             font-weight: bold;
             text-shadow: 1px 1px 0 #fff;
         }
-        #progressbar{
-            height:30px;
-            display:none;
+
+        #progressbar {
+            height: 30px;
+            display: none;
         }
-        #dialog{
-            display:none;
+
+        #dialog {
+            display: none;
         }
     </style>
     <script>
@@ -56,22 +62,22 @@
          *  * 4. 提pr
          *   **********************************************************************************
          */
-        $(document).ready(function() {
+        $(document).ready(function () {
             var Qiniu_UploadUrl = "http://up-z2.qiniu.com";
             var progressbar = $("#progressbar"),
                 progressLabel = $(".progress-label");
             progressbar.progressbar({
                 value: false,
-                change: function() {
+                change: function () {
                     progressLabel.text(progressbar.progressbar("value") + "%");
                 },
-                complete: function() {
+                complete: function () {
                     progressLabel.text("Complete!");
                 }
             });
-            $("#btn_upload").click(function() {
+            $("#btn_upload").click(function () {
                 //普通上传
-                var Qiniu_upload = function(f, token, key) {
+                var Qiniu_upload = function (f, token, key) {
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', Qiniu_UploadUrl, true);
                     var formData, startDate;
@@ -80,7 +86,7 @@
                     formData.append('token', token);
                     formData.append('file', f);
                     var taking;
-                    xhr.upload.addEventListener("progress", function(evt) {
+                    xhr.upload.addEventListener("progress", function (evt) {
                         if (evt.lengthComputable) {
                             var nowDate = new Date().getTime();
                             taking = nowDate - startDate;
@@ -99,7 +105,7 @@
                         }
                     }, false);
 
-                    xhr.onreadystatechange = function(response) {
+                    xhr.onreadystatechange = function (response) {
                         if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
                             var blkRet = JSON.parse(xhr.responseText);
                             console && console.log(blkRet);
@@ -123,10 +129,10 @@
     </script>
 </head>
 <body>
-<ul>
+<%--<ul>
     <li>
         <label for="token">token:</label>
-        <input id="token" name="token" class="ipt" value=""><a target="blank" href="http://jsfiddle.net/gh/get/extjs/4.2/icattlecoder/jsfiddle/tree/master/uptoken">在线生成token</a>
+        <input id="token" name="token" class="ipt" value="">
     </li>
     <li>
         <label for="key">key:</label>
@@ -140,7 +146,50 @@
         <input id="btn_upload" type="button" value="提交">
     </li>
     <div id="progressbar"><div class="progress-label"></div></div>
-</ul>
+</ul>--%>
+<div style="width: 800px;">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="token" class="col-sm-2 control-label">token:</label>
+            <div class="col-sm-8">
+                <input id="token" name="token" class="form-control" value="">
+            </div>
+            <a target="blank" class="col-sm-2 control-label" href="openapi.htm">在线生成token</a>
+        </div>
+        <div class="form-group">
+            <label for="key" class="col-sm-2 control-label">key:</label>
+            <div class="col-sm-8">
+                <input id="key" name="key" class="form-control" value="">
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="file" class="col-sm-2 control-label">照片</label>
+            <div class="col-sm-8">
+                <input id="file" name="file" class="form-control" type="file"/>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <input id="btn_upload" type="button" class="btn btn-primary" value="提交">
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div id="progressbar">
+                    <div class="progress-label"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 <div id="dialog" title="上传成功"></div>
 </body>
 </html>
