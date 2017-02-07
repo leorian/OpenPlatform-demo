@@ -29,4 +29,9 @@ public class IndexController {
         return "upload";
     }
 
+    @RequestMapping("/ceshi")
+    public String ceshi(HttpServletRequest request) {
+        return "ceshi";
+    }
+
 }
