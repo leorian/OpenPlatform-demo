@@ -131,7 +131,7 @@
                 </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="appKeyInput"
-                           value="A0E24EAD-B615-4752-BE94-F2AC6C049F50">
+                           value="${appKey}">
                 </div>
                 <div class="col-sm-2">
 
@@ -143,7 +143,7 @@
                 </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="appSecretInput"
-                           value="799460E7-9F1B-4029-BBA1-BFC0FB8165CE">
+                           value="${appSecret}">
                 </div>
                 <div class="col-sm-2">
 
