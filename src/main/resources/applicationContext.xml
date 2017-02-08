@@ -19,5 +19,10 @@
         <property name="requestUrl" value="${requestUrl}"/>
         <property name="appKey" value="${appKey}"/>
         <property name="appSecret" value="${appSecret}"/>
+        <property name="route" value="${route}"/>
+        <property name="addr" value="${addr}"/>
+        <property name="ver" value="${ver}"/>
+        <property name="method" value="${method}"/>
+        <property name="params" value="${params}"/>
     </bean>
 </beans>

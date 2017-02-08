@@ -12,6 +12,12 @@ public class TokenModel implements Serializable{
     private long currentTime;
     private String signMsg;
 
+    private String route;
+    private String addr;
+    private String ver;
+    private String method;
+    private String params;
+
     public String getRequestUrl() {
         return requestUrl;
     }
@@ -52,6 +58,46 @@ public class TokenModel implements Serializable{
         this.signMsg = signMsg;
     }
 
+    public String getRoute() {
+        return route;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
+
+    public String getAddr() {
+        return addr;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
+    }
+
+    public String getVer() {
+        return ver;
+    }
+
+    public void setVer(String ver) {
+        this.ver = ver;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+    public String getParams() {
+        return params;
+    }
+
+    public void setParams(String params) {
+        this.params = params;
+    }
+
     @Override
     public String toString() {
         return "TokenModel{" +
@@ -60,6 +106,11 @@ public class TokenModel implements Serializable{
                 ", appSecret='" + appSecret + '\'' +
                 ", currentTime=" + currentTime +
                 ", signMsg='" + signMsg + '\'' +
+                ", route='" + route + '\'' +
+                ", addr='" + addr + '\'' +
+                ", ver='" + ver + '\'' +
+                ", method='" + method + '\'' +
+                ", params='" + params + '\'' +
                 '}';
     }
 }

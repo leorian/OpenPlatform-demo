@@ -117,7 +117,7 @@
         <div class="form-group">
             <label for="routeInput" class="col-sm-2 control-label">route</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="routeInput" value="access"/>
+                <input type="text" class="form-control" id="routeInput" value="${route}"/>
             </div>
             <div class="col-sm-2">
 
@@ -126,7 +126,7 @@
         <div class="form-group">
             <label for="addrInput" class="col-sm-2 control-label">addr</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="addrInput" value="qiniuTokenService"/>
+                <input type="text" class="form-control" id="addrInput" value="${addr}"/>
             </div>
             <div class="col-sm-2">
 
@@ -135,7 +135,7 @@
         <div class="form-group">
             <label for="verInput" class="col-sm-2 control-label">ver</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="verInput" value="v1.0"/>
+                <input type="text" class="form-control" id="verInput" value="${ver}"/>
             </div>
             <div class="col-sm-2">
 
@@ -162,7 +162,7 @@
         <div class="form-group">
             <label for="openApiRequestTextArea" class="col-sm-2 control-label">接口参数</label>
             <div class="col-sm-8">
-                <textarea id="openApiRequestTextArea" rows="10" cols="70">{"key":"hello.jpg"}</textarea>
+                <textarea id="openApiRequestTextArea" rows="10" cols="70">${params}</textarea>
             </div>
             <div class="col-sm-2">
                 JSON字符串，具体调用时将解析成具体参数名=参数值形式，和token并列提交
