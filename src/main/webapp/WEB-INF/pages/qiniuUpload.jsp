@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <%@include file="include.inc.jsp" %>
+    <%--<%@include file="include.inc.jsp" %>--%>
     <style>
         .ipt {
             width: 300px;

@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <%@include file="include.inc.jsp" %>
+    <%--<%@include file="include.inc.jsp" %>--%>
     <script>
         $(function () {
             var timestamp = Date.parse(new Date());

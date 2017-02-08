@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    <%@include file="include.inc.jsp" %>
+    <%--<%@include file="include.inc.jsp" %>--%>
     <script>
         $(function () {
             //调用OpenApi接口按钮事件
