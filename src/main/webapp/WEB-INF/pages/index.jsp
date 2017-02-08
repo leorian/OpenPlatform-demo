@@ -23,6 +23,16 @@
     <script>
         $(function () {
            $("#mainContainer").load("getToken.htm");
+
+           //菜单单击事件
+           $("#openPlatformDemoMenu").delegate(".list-group-item", "click", function () {
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                var menuId = $(this).attr("id");
+                $("#mainContainer").load(menuId.replace("Menu",".htm"));
+           });
+
+
         });
     </script>
 </head>
@@ -36,18 +46,18 @@
 
     <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-3" id="openPlatformDemoMenu">
             <div class="module">
                 <div class="list-group">
-                    <a href="#" class="list-group-item active" id="getTokenMenu">
+                    <a href="javascript:void(0);" class="list-group-item active" id="getTokenMenu">
                         <h4 class="list-group-item-heading">获取token</h4>
                         <p class="list-group-item-text"></p>
                     </a>
-                    <a href="#" class="list-group-item" id="callOpenApiMenu">
+                    <a href="javascript:void(0);" class="list-group-item" id="openApiMenu">
                         <h4 class="list-group-item-heading">OpenApi接口调用</h4>
                         <p class="list-group-item-text"></p>
                     </a>
-                    <a href="#" class="list-group-item" id="qiniuUploadMenu">
+                    <a href="javascript:void(0);" class="list-group-item" id="qiniuUploadMenu">
                         <h4 class="list-group-item-heading">七牛上传</h4>
                         <p class="list-group-item-text"></p>
                     </a>
