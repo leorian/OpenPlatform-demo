@@ -121,14 +121,14 @@ public class IndexController {
 
         try {
             httpPost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         HttpResponse httpResponse = null;
         try {
             httpResponse = httpClient.execute(httpPost);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -141,7 +141,7 @@ public class IndexController {
             if (flag) {
                 modelMap.putAll((Map<? extends String, ?>) resultJsonMap.get("data"));
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
