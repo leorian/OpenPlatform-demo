@@ -269,13 +269,13 @@
 
     <h2>2.6获取七牛上传凭证token成功示意图</h2>
     <div>
-        <img src="${base}/img/getqiniuTokenSuccess.png"/>
+        <img src="img/getqiniuTokenSuccess.png"/>
     </div>
     <br/>
 
     <h2>2.7获取七牛上传凭证token失败示意图</h2>
     <div>
-        <img src="${base}/img/getqiniuTokenFail.png"/>
+        <img src="img/getqiniuTokenFail.png"/>
     </div>
     <br/>
 

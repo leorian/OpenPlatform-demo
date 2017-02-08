@@ -278,11 +278,11 @@
 
     <h2>1.7获取token成功示意图</h2>
     <div>
-        <img src="${base}/img/getTokenSuccess.png"/>
+        <img src="img/getTokenSuccess.png"/>
     </div>
     <h2>1.8获取token失败示意图</h2>
     <div>
-        <img src="${base}/img/getTokenFail.png"/>
+        <img src="img/getTokenFail.png"/>
     </div>
     <br/>
 
