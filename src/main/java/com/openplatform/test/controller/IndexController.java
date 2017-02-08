@@ -17,6 +17,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
@@ -44,12 +45,32 @@ public class IndexController {
 
     @RequestMapping("/openApi")
     public String openApi(HttpServletRequest request, ModelMap modelMap) {
-        encapsulationTokenToModelMap(modelMap);
+        String url = tokenModel.getRequestUrl() + "/token/getToken";
+        Date currentDate = new Date();
+        tokenModel.setCurrentTime(currentDate.getTime());
+        tokenModel.setSignMsg(getMD5((tokenModel.getAppKey() + tokenModel.getCurrentTime()
+                + tokenModel.getAppSecret())));
+        modelMap.putAll(new BeanMap(tokenModel));
+        encapsulationTokenToModelMap(modelMap, url);
         return "openApi";
     }
 
     @RequestMapping("/qiniuUpload")
-    public String qiniuUpload(HttpServletRequest request) {
+    public String qiniuUpload(HttpServletRequest request, ModelMap modelMap) {
+        openApi(request, modelMap);
+        String url = tokenModel.getRequestUrl() + "/" + tokenModel.getRoute() + "/" + tokenModel.getAddr()
+                + "/" + tokenModel.getVer() + "/" + tokenModel.getMethod();
+        tokenModel.setToken((String) modelMap.get("accessToken"));
+        String params = tokenModel.getParams();
+        if (StringUtils.hasText(params)) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                modelMap.putAll(objectMapper.readValue(params, Map.class));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        encapsulationTokenToModelMap(modelMap, url);
         return "qiniuUpload";
     }
 
@@ -85,20 +106,21 @@ public class IndexController {
      * 封装token
      *
      * @param modelMap
+     * @param url
      */
-    public void encapsulationTokenToModelMap(ModelMap modelMap) {
-        Date currentDate = new Date();
-        tokenModel.setCurrentTime(currentDate.getTime());
-        tokenModel.setSignMsg(getMD5((tokenModel.getAppKey() + tokenModel.getCurrentTime()
-                + tokenModel.getAppSecret())));
+    public void encapsulationTokenToModelMap(ModelMap modelMap, String url) {
+
         HttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost(tokenModel.getRequestUrl() + "/token/getToken");
-        Map<String, Object> tokenModelMap = new BeanMap(tokenModel);
+        HttpPost httpPost = new HttpPost(url);
         List<NameValuePair> nvps = new ArrayList<NameValuePair>();
 
-        Set<String> keySet = tokenModelMap.keySet();
+        Set<String> keySet = modelMap.keySet();
         for (String key : keySet) {
-            nvps.add(new BasicNameValuePair(key, tokenModelMap.get(key).toString()));
+            if (!StringUtils.hasText(key) || modelMap.get(key) == null) {
+                continue;
+            }
+
+            nvps.add(new BasicNameValuePair(key, modelMap.get(key).toString()));
         }
 
         try {
@@ -126,8 +148,6 @@ public class IndexController {
             e.printStackTrace();
         }
 
-        System.out.println(tokenModelMap);
-        modelMap.putAll(tokenModelMap);
     }
 
 }

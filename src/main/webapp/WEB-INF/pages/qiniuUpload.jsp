@@ -117,7 +117,7 @@
         <div class="form-group">
             <label for="token" class="col-sm-2 control-label">token:</label>
             <div class="col-sm-8">
-                <input id="token" name="token" class="form-control" value="">
+                <input id="token" name="token" class="form-control" value="${upToken}">
             </div>
             <div class="col-sm-2">
 
@@ -126,7 +126,7 @@
         <div class="form-group">
             <label for="key" class="col-sm-2 control-label">key:</label>
             <div class="col-sm-8">
-                <input id="key" name="key" class="form-control" value="">
+                <input id="key" name="key" class="form-control" value="${key}">
             </div>
             <div class="col-sm-2">
 

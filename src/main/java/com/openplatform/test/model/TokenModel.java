@@ -17,6 +17,7 @@ public class TokenModel implements Serializable{
     private String ver;
     private String method;
     private String params;
+    private String token;
 
     public String getRequestUrl() {
         return requestUrl;
@@ -98,6 +99,14 @@ public class TokenModel implements Serializable{
         this.params = params;
     }
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     @Override
     public String toString() {
         return "TokenModel{" +
@@ -111,6 +120,7 @@ public class TokenModel implements Serializable{
                 ", ver='" + ver + '\'' +
                 ", method='" + method + '\'' +
                 ", params='" + params + '\'' +
+                ", token='" + token + '\'' +
                 '}';
     }
 }
