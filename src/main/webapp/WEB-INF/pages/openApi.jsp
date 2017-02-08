@@ -101,79 +101,14 @@
 <body>
 <div style="width: 800px;">
     <h1>OpenApi接口调用</h1>
-    <h2>2.1地址</h2>
-    <p>
-        /{route}/{addr}/{ver}/{method}
-    </p>
     <br/>
 
-    <h2>2.2请求方式</h2>
-    <p>
-        HTTP POST
-    </p>
-    <br/>
-
-    <h2>2.3请求参数</h2>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>参数名称</th>
-            <th>类型（长度）</th>
-            <th>必填</th>
-            <th>备注</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>route</td>
-            <td>varchar(32)</td>
-            <td>必填</td>
-            <td>路由</td>
-        </tr>
-        <tr>
-            <td>addr</td>
-            <td>varchar(512)</td>
-            <td>必填</td>
-            <td>接口类路径/http地址</td>
-        </tr>
-        <tr>
-            <td>ver</td>
-            <td>varchar(8)</td>
-            <td>必填</td>
-            <td>环境</td>
-        </tr>
-        <tr>
-            <td>method</td>
-            <td>varchar(128)</td>
-            <td>必填</td>
-            <td>接口方法</td>
-        </tr>
-        <tr>
-            <td>token</td>
-            <td>varchar(64)</td>
-            <td>必填</td>
-            <td>开放平台token</td>
-        </tr>
-        <tr>
-            <td>接口请求参数</td>
-            <td>不限</td>
-            <td>非必填</td>
-            <td>具体接口调用所需参数</td>
-        </tr>
-        </tbody>
-    </table>
-    <br/>
-
-    <h2>2.4返回参数</h2>
-    <p>JSON格式，具体接口调用返回值</p>
-    <br/>
-
-    <h2>2.5OpenApi接口调用测试用例Demo运行环境</h2>
+    <h2>2.1OpenApi接口调用测试用例Demo运行环境</h2>
     <form class="form-horizontal" role="form">
         <div class="form-group">
             <label for="requestUrlInput" class="col-sm-2 control-label">请求地址</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access" />
+                <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access"/>
             </div>
             <label class="col-sm-2 control-label">
                 /{route}/{addr}/{ver}/{method}
@@ -182,7 +117,7 @@
         <div class="form-group">
             <label for="routeInput" class="col-sm-2 control-label">route</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="routeInput" value="access" />
+                <input type="text" class="form-control" id="routeInput" value="access"/>
             </div>
             <div class="col-sm-2">
 
@@ -265,15 +200,82 @@
     </div>
     <br/>
 
+    <h2>2.2地址</h2>
+    <p>
+        /{route}/{addr}/{ver}/{method}
+    </p>
+    <br/>
+
+    <h2>2.3请求方式</h2>
+    <p>
+        HTTP POST
+    </p>
+    <br/>
+
+    <h2>2.4请求参数</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>类型（长度）</th>
+            <th>必填</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>route</td>
+            <td>varchar(32)</td>
+            <td>必填</td>
+            <td>路由</td>
+        </tr>
+        <tr>
+            <td>addr</td>
+            <td>varchar(512)</td>
+            <td>必填</td>
+            <td>接口类路径/http地址</td>
+        </tr>
+        <tr>
+            <td>ver</td>
+            <td>varchar(8)</td>
+            <td>必填</td>
+            <td>环境</td>
+        </tr>
+        <tr>
+            <td>method</td>
+            <td>varchar(128)</td>
+            <td>必填</td>
+            <td>接口方法</td>
+        </tr>
+        <tr>
+            <td>token</td>
+            <td>varchar(64)</td>
+            <td>必填</td>
+            <td>开放平台token</td>
+        </tr>
+        <tr>
+            <td>接口请求参数</td>
+            <td>不限</td>
+            <td>非必填</td>
+            <td>具体接口调用所需参数</td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+
+    <h2>2.5返回参数</h2>
+    <p>JSON格式，具体接口调用返回值</p>
+    <br/>
+
     <h2>2.6获取七牛上传凭证token成功示意图</h2>
     <div>
-        <img src="${base}/img/getqiniuTokenSuccess.png" />
+        <img src="${base}/img/getqiniuTokenSuccess.png"/>
     </div>
     <br/>
 
-    <h2>2.6获取七牛上传凭证token失败示意图</h2>
+    <h2>2.7获取七牛上传凭证token失败示意图</h2>
     <div>
-        <img src="${base}/img/getqiniuTokenFail.png" />
+        <img src="${base}/img/getqiniuTokenFail.png"/>
     </div>
     <br/>
 

@@ -109,79 +109,9 @@
 <body>
 <div style="width: 800px;">
     <h1>获取token</h1>
-    <h2>1.1地址</h2>
-    <p>/token/getToken</p>
     <br/>
 
-    <h2>1.2请求方式</h2>
-    <p>HTTP POST</p>
-    <br/>
-
-    <h2>1.3请求参数</h2>
-    <p>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>参数名称</th>
-            <th>类型（长度）</th>
-            <th>必填</th>
-            <th>备注</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>appKey</td>
-            <td>varchar(64)</td>
-            <td>是</td>
-            <td>应用Key</td>
-        </tr>
-        <tr>
-            <td>currentTime</td>
-            <td>Long</td>
-            <td>是</td>
-            <td>当前时间的毫秒数</td>
-        </tr>
-        <tr>
-            <td>signMsg</td>
-            <td>varchar(32)</td>
-            <td>是</td>
-            <td>Md5加密后的字符串</td>
-        </tr>
-        </tbody>
-    </table>
-    </p>
-    <br/>
-
-    <h2>1.4加密方式</h2>
-    <p>
-        signMsg的值:参数appKey,currentTime的值字符串拼接,再加上appSecret进行Md5加密
-    </p>
-    <br/>
-
-    <h2>1.5返回参数</h2>
-    <p>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>参数名称</th>
-            <th>类型(长度)</th>
-            <th>必返</th>
-            <th>备注</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>token</td>
-            <td>varchar(64)</td>
-            <td>是</td>
-            <td>&nbsp;</td>
-        </tr>
-        </tbody>
-    </table>
-    </p>
-    <br/>
-
-    <h2>1.6获取token测试用例Demo运行环境</h2>
+    <h2>1.1获取token测试用例Demo运行环境</h2>
     <div>
         <form class="form-horizontal" role="form">
             <div class="form-group">
@@ -200,7 +130,8 @@
                     appKey
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="appKeyInput" value="A0E24EAD-B615-4752-BE94-F2AC6C049F50">
+                    <input type="text" class="form-control" id="appKeyInput"
+                           value="A0E24EAD-B615-4752-BE94-F2AC6C049F50">
                 </div>
                 <div class="col-sm-2">
 
@@ -211,7 +142,8 @@
                     appSecret
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="appSecretInput" value="799460E7-9F1B-4029-BBA1-BFC0FB8165CE">
+                    <input type="text" class="form-control" id="appSecretInput"
+                           value="799460E7-9F1B-4029-BBA1-BFC0FB8165CE">
                 </div>
                 <div class="col-sm-2">
 
@@ -272,14 +204,88 @@
     </div>
     <br/>
 
+    <h2>1.2地址</h2>
+    <p>/token/getToken</p>
+    <br/>
+
+    <h2>1.3请求方式</h2>
+    <p>HTTP POST</p>
+    <br/>
+
+    <h2>1.4请求参数</h2>
+    <p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>类型（长度）</th>
+            <th>必填</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>appKey</td>
+            <td>varchar(64)</td>
+            <td>是</td>
+            <td>应用Key</td>
+        </tr>
+        <tr>
+            <td>currentTime</td>
+            <td>Long</td>
+            <td>是</td>
+            <td>当前时间的毫秒数</td>
+        </tr>
+        <tr>
+            <td>signMsg</td>
+            <td>varchar(32)</td>
+            <td>是</td>
+            <td>Md5加密后的字符串</td>
+        </tr>
+        </tbody>
+    </table>
+    </p>
+    <br/>
+
+    <h2>1.5加密方式</h2>
+    <p>
+        signMsg的值:参数appKey,currentTime的值字符串拼接,再加上appSecret进行Md5加密
+    </p>
+    <br/>
+
+    <h2>1.6返回参数</h2>
+    <p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>参数名称</th>
+            <th>类型(长度)</th>
+            <th>必返</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>token</td>
+            <td>varchar(64)</td>
+            <td>是</td>
+            <td>&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+    </p>
+    <br/>
+
     <h2>1.7获取token成功示意图</h2>
     <div>
-        <img src="${base}/img/getTokenSuccess.png" />
+        <img src="${base}/img/getTokenSuccess.png"/>
     </div>
     <h2>1.8获取token失败示意图</h2>
     <div>
         <img src="${base}/img/getTokenFail.png"/>
     </div>
+    <br/>
+
 </div>
 </body>
 </html>

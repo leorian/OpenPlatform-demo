@@ -50,15 +50,15 @@
             <div class="module">
                 <div class="list-group">
                     <a href="javascript:void(0);" class="list-group-item active" id="getTokenMenu">
-                        <h4 class="list-group-item-heading">获取token</h4>
+                        <h4 class="list-group-item-heading">1.获取token</h4>
                         <p class="list-group-item-text"></p>
                     </a>
                     <a href="javascript:void(0);" class="list-group-item" id="openApiMenu">
-                        <h4 class="list-group-item-heading">OpenApi接口调用</h4>
+                        <h4 class="list-group-item-heading">2.OpenApi接口调用</h4>
                         <p class="list-group-item-text"></p>
                     </a>
                     <a href="javascript:void(0);" class="list-group-item" id="qiniuUploadMenu">
-                        <h4 class="list-group-item-heading">七牛上传</h4>
+                        <h4 class="list-group-item-heading">3.七牛上传示例</h4>
                         <p class="list-group-item-text"></p>
                     </a>
                 </div>
