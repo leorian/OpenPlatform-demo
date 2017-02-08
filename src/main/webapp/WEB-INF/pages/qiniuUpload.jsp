@@ -140,7 +140,9 @@
             <div class="col-sm-8">
                 <input id="token" name="token" class="form-control" value="">
             </div>
-            <a target="blank" class="col-sm-2 control-label" href="openapi.htm">在线生成token</a>
+            <div class="col-sm-2">
+
+            </div>
         </div>
         <div class="form-group">
             <label for="key" class="col-sm-2 control-label">key:</label>
