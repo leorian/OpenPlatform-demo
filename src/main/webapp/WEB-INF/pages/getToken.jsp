@@ -119,7 +119,7 @@
                     请求地址
                 </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access">
+                    <input type="text" class="form-control" id="requestUrlInput" value="${requestUrl}">
                 </div>
                 <label class="col-sm-2 control-label">
                     /token/getToken
