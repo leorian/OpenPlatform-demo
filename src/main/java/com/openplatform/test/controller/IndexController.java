@@ -19,19 +19,19 @@ public class IndexController {
         return "hello";
     }
 
-    @RequestMapping("/openapi")
+    @RequestMapping("/openApi")
     public String openapi(HttpServletRequest request) {
-        return "openapi";
+        return "openApi";
     }
 
-    @RequestMapping("/upload")
+    @RequestMapping("/qiniuUpload")
     public String upload(HttpServletRequest request) {
-        return "upload";
+        return "qiniuUpload";
     }
 
-    @RequestMapping("/ceshi")
+    @RequestMapping("/getToken")
     public String ceshi(HttpServletRequest request) {
-        return "ceshi";
+        return "getToken";
     }
 
 }
