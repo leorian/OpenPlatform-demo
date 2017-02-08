@@ -9,7 +9,7 @@ public class TokenModel implements Serializable{
     private String requestUrl;
     private String appKey;
     private String appSecret;
-    private long currrentTime;
+    private long currentTime;
     private String signMsg;
 
     public String getRequestUrl() {
@@ -36,12 +36,12 @@ public class TokenModel implements Serializable{
         this.appSecret = appSecret;
     }
 
-    public long getCurrrentTime() {
-        return currrentTime;
+    public long getCurrentTime() {
+        return currentTime;
     }
 
-    public void setCurrrentTime(long currrentTime) {
-        this.currrentTime = currrentTime;
+    public void setCurrentTime(long currentTime) {
+        this.currentTime = currentTime;
     }
 
     public String getSignMsg() {
@@ -58,7 +58,7 @@ public class TokenModel implements Serializable{
                 "requestUrl='" + requestUrl + '\'' +
                 ", appKey='" + appKey + '\'' +
                 ", appSecret='" + appSecret + '\'' +
-                ", currrentTime=" + currrentTime +
+                ", currentTime=" + currentTime +
                 ", signMsg='" + signMsg + '\'' +
                 '}';
     }

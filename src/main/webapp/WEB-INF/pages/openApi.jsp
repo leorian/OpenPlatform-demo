@@ -108,7 +108,7 @@
         <div class="form-group">
             <label for="requestUrlInput" class="col-sm-2 control-label">请求地址</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="requestUrlInput" value="http://localhost:8085/access"/>
+                <input type="text" class="form-control" id="requestUrlInput" value="${requestUrl}"/>
             </div>
             <label class="col-sm-2 control-label">
                 /{route}/{addr}/{ver}/{method}
@@ -153,7 +153,7 @@
         <div class="form-group">
             <label for="tokenInput" class="col-sm-2 control-label">token</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="tokenInput"/>
+                <input type="text" class="form-control" id="tokenInput" value="${accessToken}"/>
             </div>
             <div class="col-sm-2">
 
