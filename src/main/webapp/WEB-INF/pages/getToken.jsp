@@ -9,6 +9,14 @@
         $(function () {
             var timestamp = Date.parse(new Date());
             $("#currentTimeInput").val(timestamp);
+
+            //生成时间戳按钮事件
+            $("#generateCurrentTimeBtn").click(function () {
+                if (console) {
+                    console.log("生成时间戳时间触发");
+                    $("#currentTimeInput").val(Date.parse(new Date()));
+                }
+            });
             //生成signMsg按钮事件
             $("#generateSignMsgBtn").click(function () {
                 if (console) {
@@ -157,7 +165,7 @@
                     <input type="text" class="form-control" id="currentTimeInput">
                 </div>
                 <div class="col-sm-2">
-                    <button type="button" class="btn btn-primary" id="generateSignMsgBtn">生成signMsg</button>
+                    <button type="button" class="btn btn-primary" id="generateCurrentTimeBtn">生成时间戳</button>
                 </div>
             </div>
             <div class="form-group">
@@ -168,7 +176,7 @@
                     <input type="text" class="form-control" readonly="readonly" id="signMsgInput">
                 </div>
                 <div class="col-sm-2">
-
+                    <button type="button" class="btn btn-primary" id="generateSignMsgBtn">生成signMsg</button>
                 </div>
             </div>
             <div class="form-group">

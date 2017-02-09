@@ -37,9 +37,9 @@
     </script>
 </head>
 <body>
-<div class="jumbotron">
+<div class="jumbotron" style="padding-top: 5px;padding-bottom: 5px;">
     <div class="container">
-        <h1>开发平台测试DEMO运行说明</h1>
+        <h1>开放平台在线测试</h1>
     </div>
 </div>
 <div class="container">
