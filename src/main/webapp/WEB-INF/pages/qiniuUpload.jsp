@@ -115,7 +115,7 @@
     <h2>3.1七牛上传运行测试用例DEMO</h2>
     <form class="form-horizontal" role="form">
         <div class="form-group">
-            <label for="token" class="col-sm-2 control-label">token:</label>
+            <label for="token" class="col-sm-2 control-label">七牛upToken:</label>
             <div class="col-sm-8">
                 <input id="token" name="token" class="form-control" value="${upToken}">
             </div>

@@ -119,7 +119,7 @@
     <h1>获取token</h1>
     <br/>
 
-    <h2>1.1获取token测试用例Demo运行环境</h2>
+    <h2>1.1获取token</h2>
     <div>
         <form class="form-horizontal" role="form">
             <div class="form-group">

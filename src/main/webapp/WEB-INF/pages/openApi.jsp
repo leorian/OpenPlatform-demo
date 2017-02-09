@@ -103,7 +103,7 @@
     <h1>OpenApi接口调用</h1>
     <br/>
 
-    <h2>2.1OpenApi接口调用测试用例Demo运行环境</h2>
+    <h2>2.1OpenApi接口调用</h2>
     <form class="form-horizontal" role="form">
         <div class="form-group">
             <label for="requestUrlInput" class="col-sm-2 control-label">请求地址</label>

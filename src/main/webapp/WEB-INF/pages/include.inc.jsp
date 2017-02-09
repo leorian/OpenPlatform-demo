@@ -6,7 +6,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <meta charset=UTF-8>
-<title>开放平台测试用例Demo</title>
+<title>OpenApi在线测试</title>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="${base}/webFrame/bootstrap-3.3.5/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="${base}/webFrame/bootstrap-3.3.5/bootstrap/css/bootstrap-theme.min.css">
