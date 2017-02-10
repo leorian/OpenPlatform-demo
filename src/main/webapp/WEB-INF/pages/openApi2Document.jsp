@@ -16,7 +16,7 @@
 
     <h2>2.1地址</h2>
     <p>
-        请求地址/{route}/{addr}/{ver}/{method}
+        ${requestUrl}/{route}/{addr}/{ver}/{method}
     </p>
     <br/>
 

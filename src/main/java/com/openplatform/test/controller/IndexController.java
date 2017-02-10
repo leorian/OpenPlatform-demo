@@ -69,6 +69,7 @@ public class IndexController {
 
     @RequestMapping("/openApi2Document")
     public String openApi2Document(HttpServletRequest request, ModelMap modelMap) {
+        modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "openApi2Document";
     }
 
@@ -99,6 +100,7 @@ public class IndexController {
 
     @RequestMapping("/qiniuUploadDocument")
     public String qiniuUploadDocument(HttpServletRequest request, ModelMap modelMap) {
+        modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "qiniuUploadDocument";
     }
 
@@ -116,6 +118,7 @@ public class IndexController {
 
     @RequestMapping("/getTokenDocument")
     public String getTokenDocument(HttpServletRequest request, ModelMap modelMap) {
+        modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "getTokenDocument";
     }
 

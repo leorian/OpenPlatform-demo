@@ -16,7 +16,7 @@
     <br/>
 
     <h2>1.1地址</h2>
-    <p>/token/getToken</p>
+    <p>${requestUrl}/token/getToken</p>
     <br/>
 
     <h2>1.2请求方式</h2>
