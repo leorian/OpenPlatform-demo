@@ -3,6 +3,7 @@ package com.openplatform.test.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import com.openplatform.test.model.TokenModel;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.beanutils.BeanMap;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -21,7 +22,6 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.*;
@@ -61,6 +61,17 @@ public class IndexController {
         return "openApi2";
     }
 
+    @RequestMapping("/openApi2Tools")
+    public String openApi2Tools(HttpServletRequest request, ModelMap modelMap) {
+        openApi2(request, modelMap);
+        return "openApi2Tools";
+    }
+
+    @RequestMapping("/openApi2Document")
+    public String openApi2Document(HttpServletRequest request, ModelMap modelMap) {
+        return "openApi2Document";
+    }
+
     @RequestMapping("/qiniuUpload")
     public String qiniuUpload(HttpServletRequest request, ModelMap modelMap) {
         openApi(request, modelMap);
@@ -80,10 +91,32 @@ public class IndexController {
         return "qiniuUpload";
     }
 
+    @RequestMapping("/qiniuUploadTools")
+    public String qiniuUploadTools(HttpServletRequest request, ModelMap modelMap) {
+        qiniuUpload(request, modelMap);
+        return "qiniuUploadTools";
+    }
+
+    @RequestMapping("/qiniuUploadDocument")
+    public String qiniuUploadDocument(HttpServletRequest request, ModelMap modelMap) {
+        return "qiniuUploadDocument";
+    }
+
     @RequestMapping("/getToken")
     public String getToken(HttpServletRequest request, ModelMap modelMap) {
         modelMap.putAll(new BeanMap(tokenModel));
         return "getToken";
+    }
+
+    @RequestMapping("/getTokenTools")
+    public String getTokenTools(HttpServletRequest request, ModelMap modelMap) {
+        getToken(request, modelMap);
+        return "getTokenTools";
+    }
+
+    @RequestMapping("/getTokenDocument")
+    public String getTokenDocument(HttpServletRequest request, ModelMap modelMap) {
+        return "getTokenDocument";
     }
 
     /**
