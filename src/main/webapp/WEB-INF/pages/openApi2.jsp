@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="openApiRequestTextArea" class="col-sm-2 control-label">接口参数</label>
+            <label for="openApiRequestTextArea" class="col-sm-2 control-label">业务参数</label>
             <div class="col-sm-7">
                 <textarea id="openApiRequestTextArea" rows="10" cols="68">${params}</textarea>
             </div>
@@ -182,7 +182,7 @@
             <td>开放平台token</td>
         </tr>
         <tr>
-            <td>接口请求参数</td>
+            <td>业务请求参数</td>
             <td>不限</td>
             <td>非必填</td>
             <td>具体接口调用所需参数</td>
