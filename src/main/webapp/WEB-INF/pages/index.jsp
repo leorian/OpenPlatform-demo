@@ -64,8 +64,6 @@
     </style>
     <script>
         $(function () {
-            $("#mainContainer").load("getToken.htm");
-
             //菜单单击事件
             $("#openPlatformDemoMenu").delegate("ul>li.list-group-item", "click", function () {
                 $("ul>li.list-group-item").removeClass("active");
@@ -73,8 +71,7 @@
                 var menuId = $(this).attr("id");
                 $("#mainContainer").load(menuId.replace("Menu",".htm"));
             });
-
-
+            $("#getTokenToolsMenu").trigger("click");
         });
     </script>
     <script>
