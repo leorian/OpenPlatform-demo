@@ -18,6 +18,7 @@ public class TokenModel implements Serializable{
     private String method;
     private String params;
     private String token;
+    private String openApiUrl;
 
     public String getRequestUrl() {
         return requestUrl;
@@ -107,6 +108,14 @@ public class TokenModel implements Serializable{
         this.token = token;
     }
 
+    public String getOpenApiUrl() {
+        return openApiUrl;
+    }
+
+    public void setOpenApiUrl(String openApiUrl) {
+        this.openApiUrl = openApiUrl;
+    }
+
     @Override
     public String toString() {
         return "TokenModel{" +
@@ -121,6 +130,7 @@ public class TokenModel implements Serializable{
                 ", method='" + method + '\'' +
                 ", params='" + params + '\'' +
                 ", token='" + token + '\'' +
+                ", openApiUrl='" + openApiUrl + '\'' +
                 '}';
     }
 }

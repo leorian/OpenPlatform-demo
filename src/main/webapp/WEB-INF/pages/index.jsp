@@ -53,7 +53,11 @@
                         <h4 class="list-group-item-heading">1.获取token</h4>
                         <p class="list-group-item-text"></p>
                     </a>
-                    <a href="javascript:void(0);" class="list-group-item" id="openApiMenu">
+                  <%--  <a href="javascript:void(0);" class="list-group-item" id="openApiMenu">
+                        <h4 class="list-group-item-heading">2.OpenApi接口调用</h4>
+                        <p class="list-group-item-text"></p>
+                    </a>--%>
+                    <a href="javascript:void(0);" class="list-group-item" id="openApi2Menu">
                         <h4 class="list-group-item-heading">2.OpenApi接口调用</h4>
                         <p class="list-group-item-text"></p>
                     </a>

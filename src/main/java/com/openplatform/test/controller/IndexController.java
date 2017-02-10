@@ -55,6 +55,12 @@ public class IndexController {
         return "openApi";
     }
 
+    @RequestMapping("/openApi2")
+    public String openApi2(HttpServletRequest request, ModelMap modelMap) {
+        openApi(request, modelMap);
+        return "openApi2";
+    }
+
     @RequestMapping("/qiniuUpload")
     public String qiniuUpload(HttpServletRequest request, ModelMap modelMap) {
         openApi(request, modelMap);

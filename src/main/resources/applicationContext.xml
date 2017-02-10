@@ -24,5 +24,6 @@
         <property name="ver" value="${ver}"/>
         <property name="method" value="${method}"/>
         <property name="params" value="${params}"/>
+        <property name="openApiUrl" value="${openApiUrl}"/>
     </bean>
 </beans>
