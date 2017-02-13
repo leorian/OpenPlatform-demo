@@ -107,6 +107,7 @@
                         dataHtml = dataHtml + "<p>" + "errMsg" + ": " + result.errMsg + "</p>";
                         $("#getTokenParserResultDiv").html(dataHtml);
                     }
+                    globalOpenApiUrl = requestUrlInput;
 
                 }, 'json');
 

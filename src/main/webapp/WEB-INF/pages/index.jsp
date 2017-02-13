@@ -63,13 +63,14 @@
         }
     </style>
     <script>
+        var globalOpenApiUrl = "";
         $(function () {
             //菜单单击事件
             $("#openPlatformDemoMenu").delegate("ul>li.list-group-item", "click", function () {
                 $("ul>li.list-group-item").removeClass("active");
                 $(this).addClass("active");
                 var menuId = $(this).attr("id");
-                $("#mainContainer").load(menuId.replace("Menu",".htm"));
+                $("#mainContainer").load(menuId.replace("Menu", ".htm") + "?globalOpenApiUrl=" + globalOpenApiUrl);
             });
             $("#getTokenToolsMenu").trigger("click");
         });
@@ -135,7 +136,7 @@
                 <div id="openApi2ChildMenu" class="panel-collapse collapse" role="tabpanel"
                      aria-labelledby="openApi2Menu">
                     <ul class="list-group">
-                        <li class="list-group-item"  id="openApi2ToolsMenu">
+                        <li class="list-group-item" id="openApi2ToolsMenu">
                             <button class="menu-item-left">
                                 <span class="glyphicon glyphicon-triangle-right"></span>测试工具
                             </button>
@@ -150,30 +151,30 @@
             </div><!--panel end-->
 
 
-              <div class="panel panel-primary leftMenu">
-                  <div class="panel-heading list-group-item" id="qiniuUploadMenu" data-toggle="collapse"
-                       data-target="#qiniuUploadChildMenu" role="tab">
-                      <h4 class="panel-title">
-                          3.七牛上传示例
-                          <span class="glyphicon glyphicon-chevron-down right"></span>
-                      </h4>
-                  </div>
-                  <div id="qiniuUploadChildMenu" class="panel-collapse collapse" role="tabpanel"
-                       aria-labelledby="qiniuUploadMenu">
-                      <ul class="list-group">
-                          <li class="list-group-item" id="qiniuUploadToolsMenu">
-                              <button class="menu-item-left">
-                                  <span class="glyphicon glyphicon-triangle-right"></span>测试工具
-                              </button>
-                          </li>
-                          <li class="list-group-item" id="qiniuUploadDocumentMenu">
-                              <button class="menu-item-left">
-                                  <span class="glyphicon glyphicon-triangle-right"></span>开发文档
-                              </button>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
+            <div class="panel panel-primary leftMenu">
+                <div class="panel-heading list-group-item" id="qiniuUploadMenu" data-toggle="collapse"
+                     data-target="#qiniuUploadChildMenu" role="tab">
+                    <h4 class="panel-title">
+                        3.七牛上传示例
+                        <span class="glyphicon glyphicon-chevron-down right"></span>
+                    </h4>
+                </div>
+                <div id="qiniuUploadChildMenu" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="qiniuUploadMenu">
+                    <ul class="list-group">
+                        <li class="list-group-item" id="qiniuUploadToolsMenu">
+                            <button class="menu-item-left">
+                                <span class="glyphicon glyphicon-triangle-right"></span>测试工具
+                            </button>
+                        </li>
+                        <li class="list-group-item" id="qiniuUploadDocumentMenu">
+                            <button class="menu-item-left">
+                                <span class="glyphicon glyphicon-triangle-right"></span>开发文档
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 
         </div>

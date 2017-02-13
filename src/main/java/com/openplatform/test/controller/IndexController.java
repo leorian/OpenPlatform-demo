@@ -2,6 +2,7 @@ package com.openplatform.test.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.bozhong.common.util.StringUtil;
 import com.openplatform.test.model.TokenModel;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.beanutils.BeanMap;
@@ -29,6 +30,7 @@ import java.util.*;
 @Controller
 @RequestMapping
 public class IndexController {
+    public static final String GLOBAL_OPEN_API_URL = "globalOpenApiUrl";
 
     @Autowired
     private TokenModel tokenModel;
@@ -63,12 +65,20 @@ public class IndexController {
 
     @RequestMapping("/openApi2Tools")
     public String openApi2Tools(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         openApi2(request, modelMap);
         return "openApi2Tools";
     }
 
     @RequestMapping("/openApi2Document")
     public String openApi2Document(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "openApi2Document";
     }
@@ -94,12 +104,20 @@ public class IndexController {
 
     @RequestMapping("/qiniuUploadTools")
     public String qiniuUploadTools(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         qiniuUpload(request, modelMap);
         return "qiniuUploadTools";
     }
 
     @RequestMapping("/qiniuUploadDocument")
     public String qiniuUploadDocument(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "qiniuUploadDocument";
     }
@@ -112,12 +130,20 @@ public class IndexController {
 
     @RequestMapping("/getTokenTools")
     public String getTokenTools(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         getToken(request, modelMap);
         return "getTokenTools";
     }
 
     @RequestMapping("/getTokenDocument")
     public String getTokenDocument(HttpServletRequest request, ModelMap modelMap) {
+        String globalOpenAPIURL = (String) request.getParameter(GLOBAL_OPEN_API_URL);
+        if (StringUtil.isNotBlank(globalOpenAPIURL)) {
+            tokenModel.setRequestUrl(globalOpenAPIURL);
+        }
         modelMap.put("requestUrl", tokenModel.getRequestUrl());
         return "getTokenDocument";
     }
