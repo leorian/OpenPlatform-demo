@@ -71,7 +71,8 @@
                         dataHtml = dataHtml + "<p>" + "errMsg" + ": " + result.errMsg + "</p>";
                         $("#callOpenApiParserResultDiv").html(dataHtml);
                     }
-                    globalOpenApiUrl = requestUrl;
+                    globalRequestUrl = requestUrl;
+                    globalOpenApiUrl = openApiUrl;
                 }, 'json');
 
             });

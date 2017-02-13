@@ -63,14 +63,19 @@
         }
     </style>
     <script>
+        var globalRequestUrl = "";
         var globalOpenApiUrl = "";
+        var globalOpenAppKey = "";
+        var globalOpenAppSecret = "";
+
         $(function () {
             //菜单单击事件
             $("#openPlatformDemoMenu").delegate("ul>li.list-group-item", "click", function () {
                 $("ul>li.list-group-item").removeClass("active");
                 $(this).addClass("active");
                 var menuId = $(this).attr("id");
-                $("#mainContainer").load(menuId.replace("Menu", ".htm") + "?globalOpenApiUrl=" + globalOpenApiUrl);
+                $("#mainContainer").load(menuId.replace("Menu", ".htm") + "?globalRequestUrl=" + globalRequestUrl + "&globalOpenApiUrl="
+                    + globalOpenApiUrl + "&globalOpenAppKey=" + globalOpenAppKey + "&globalOpenAppSecret=" + globalOpenAppSecret);
             });
             $("#getTokenToolsMenu").trigger("click");
         });

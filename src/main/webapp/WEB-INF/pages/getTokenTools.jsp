@@ -45,6 +45,8 @@
                 }
 
                 $("#signMsgInput").val(md5(appKeyInput + currentTimeInput + appSecretInput));
+                globalOpenAppKey = appKeyInput;
+                globalOpenAppSecret =appSecretInput;
             });
 
             //获取token按钮触发
@@ -107,7 +109,7 @@
                         dataHtml = dataHtml + "<p>" + "errMsg" + ": " + result.errMsg + "</p>";
                         $("#getTokenParserResultDiv").html(dataHtml);
                     }
-                    globalOpenApiUrl = requestUrlInput;
+                    globalRequestUrl = requestUrlInput;
 
                 }, 'json');
 
