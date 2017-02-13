@@ -93,7 +93,7 @@
 <body>
 <div class="jumbotron" style="padding-top: 5px;padding-bottom: 5px;">
     <div class="container">
-        <h1>OpenApi在线测试</h1>
+        <h1>OpenAPI在线测试</h1>
     </div>
 </div>
 <div class="container">
