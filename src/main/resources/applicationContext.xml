@@ -19,7 +19,7 @@
         <property name="appId" value="9"/>
     </bean>
 
-    <bean id="tokenModel" class="com.openplatform.test.model.TokenModel">
+    <bean id="tokenModel" class="com.openplatform.test.model.TokenModel" scope="prototype">
         <property name="requestUrl" value="${requestUrl}"/>
         <property name="appKey" value="${appKey}"/>
         <property name="appSecret" value="${appSecret}"/>

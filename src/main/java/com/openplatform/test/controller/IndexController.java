@@ -17,6 +17,7 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -29,6 +30,7 @@ import java.util.*;
 
 @Controller
 @RequestMapping
+@Scope("prototype")
 public class IndexController {
     public static final String GLOBAL_REQUEST_URL = "globalRequestUrl";
     public static final String GLOBAL_OPEN_API_URL = "globalOpenApiUrl";
