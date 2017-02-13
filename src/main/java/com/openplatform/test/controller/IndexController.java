@@ -2,9 +2,7 @@ package com.openplatform.test.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.bozhong.common.util.StringUtil;
 import com.openplatform.test.model.TokenModel;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.beanutils.BeanMap;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -209,22 +207,22 @@ public class IndexController {
      */
     private void globalSetting(HttpServletRequest request) {
         String globalRequestUrl = (String) request.getParameter(GLOBAL_REQUEST_URL);
-        if (StringUtil.isNotBlank(globalRequestUrl)) {
+        if (org.apache.commons.lang3.StringUtils.isNotBlank(globalRequestUrl)) {
             tokenModel.setRequestUrl(globalRequestUrl);
         }
 
         String globalAppKey = request.getParameter(GLOBAL_APP_KEY);
-        if (StringUtil.isNotBlank(globalAppKey)) {
+        if (org.apache.commons.lang3.StringUtils.isNotBlank(globalAppKey)) {
             tokenModel.setAppKey(globalAppKey);
         }
 
         String globalAppSecret = request.getParameter(GLOBAL_APP_SECRET);
-        if (StringUtil.isNotBlank(globalAppSecret)) {
+        if (org.apache.commons.lang3.StringUtils.isNotBlank(globalAppSecret)) {
             tokenModel.setAppSecret(globalAppSecret);
         }
 
         String globalOpenApiUrl = request.getParameter(GLOBAL_OPEN_API_URL);
-        if (StringUtil.isNotBlank(globalOpenApiUrl)) {
+        if (org.apache.commons.lang3.StringUtils.isNotBlank(globalOpenApiUrl)) {
             tokenModel.setOpenApiUrl(globalOpenApiUrl);
         }
     }

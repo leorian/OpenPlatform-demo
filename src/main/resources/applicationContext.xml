@@ -15,9 +15,9 @@
         </property>
     </bean>
 
-    <bean id="configSetPropertyHolder" class="com.bozhong.config.common.ConfigSetPropertyHolder" init-method="init">
+   <!-- <bean id="configSetPropertyHolder" class="com.bozhong.config.common.ConfigSetPropertyHolder" init-method="init">
         <property name="appId" value="9"/>
-    </bean>
+    </bean>-->
 
     <bean id="tokenModel" class="com.openplatform.test.model.TokenModel" scope="prototype">
         <property name="requestUrl" value="${requestUrl}"/>
