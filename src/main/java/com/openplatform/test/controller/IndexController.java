@@ -98,6 +98,7 @@ public class IndexController {
                 e.printStackTrace();
             }
         }
+        modelMap.putAll(new BeanMap(tokenModel));
         encapsulationTokenToModelMap(modelMap, url);
         return "qiniuUpload";
     }
